@@ -1,52 +1,38 @@
-/* Reset basic styles */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-/* Body styles */
 body {
-    font-family: 'Arial', sans-serif;
-    background-color: white;
-    color: darkorange; /* Dark Orange text */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
+  margin: 0;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
 }
 
-/* Header and Typography */
-header {
-    text-align: center;
+.container {
+  text-align: center;
 }
 
-/* Handwriting font and typing animation */
-.intro-text {
-    font-family: 'Patrick Hand', cursive; /* Handwriting font */
-    font-size: 4rem; /* Big text */
-    font-weight: normal;
-    color: darkorange;
-    border-right: 0.1em solid darkorange; /* Typing cursor effect */
-    padding-right: 10px;
-    animation: typing 3s steps(20) 1s forwards, blink 0.75s step-end infinite;
+.typing {
+  font-family: 'Patrick Hand', cursive;
+  font-size: 3rem;
+  color: darkorange;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 3px solid darkorange;
+  width: 0;
+  animation: typing 3s steps(30, end) forwards, blink 0.75s step-end infinite;
 }
 
-/* Typing animation */
 @keyframes typing {
-    from {
-        width: 0;
-    }
-    to {
-        width: 18em; /* Adjust width according to your text length */
-    }
+  from {
+    width: 0;
+  }
+  to {
+    width: 20ch;
+  }
 }
 
-/* Cursor blink effect */
 @keyframes blink {
-    50% {
-        border-color: transparent;
-    }
+  50% {
+    border-color: transparent;
+  }
 }
-
