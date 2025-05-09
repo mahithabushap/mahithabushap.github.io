@@ -1,38 +1,66 @@
 body {
   margin: 0;
-  background-color: white;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
+  font-family: 'Patrick Hand', cursive;
+  background-color: white;
+  color: darkorange;
 }
 
-.container {
-  text-align: center;
+/* Sidebar styling */
+.sidebar {
+  width: 300px;
+  padding: 2rem;
+  border-right: 2px solid darkorange;
+  height: 100vh;
+  position: fixed;
+  overflow-y: auto;
+  background-color: white;
 }
 
 .typing {
-  font-family: 'Patrick Hand', cursive;
-  font-size: 3rem;
-  color: darkorange;
+  font-size: 2.2rem;
   white-space: nowrap;
   overflow: hidden;
-  border-right: 3px solid darkorange;
+  border-right: 2px solid darkorange;
   width: 0;
-  animation: typing 3s steps(30, end) forwards, blink 0.75s step-end infinite;
+  animation: typing 2s steps(30, end) forwards, blink 0.75s step-end infinite;
 }
 
 @keyframes typing {
-  from {
-    width: 0;
-  }
-  to {
-    width: 20ch;
-  }
+  from { width: 0; }
+  to { width: 21ch; }
 }
 
 @keyframes blink {
-  50% {
-    border-color: transparent;
-  }
+  50% { border-color: transparent; }
+}
+
+/* Navigation links */
+.nav {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.nav a {
+  text-decoration: none;
+  color: darkorange;
+  margin: 0.5rem 0;
+  font-size: 1.2rem;
+}
+
+/* Content styling */
+.content {
+  margin-left: 320px;
+  padding: 2rem;
+}
+
+section {
+  margin-bottom: 3rem;
+}
+
+h2 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+  color: darkorange;
 }
