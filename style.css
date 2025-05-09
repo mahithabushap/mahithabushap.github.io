@@ -1,0 +1,74 @@
+/* Apply a sleek, minimalist design with a black background */
+body {
+    background-color: black;
+    color: white;
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    overflow: hidden;
+}
+
+/* Styling the container */
+.container {
+    max-width: 1000px;
+    width: 100%;
+}
+
+/* Style for the introduction message */
+.intro h1 {
+    font-size: 3rem;
+    font-weight: 300;
+    color: white;
+    letter-spacing: 3px;
+    opacity: 0;
+    animation: fadeIn 2s forwards;
+}
+
+/* Make "Mahitha" stand out */
+.name {
+    font-size: 3.5rem;
+    font-weight: 500;
+    letter-spacing: 5px;
+}
+
+/* Style for the flower GIFs */
+.flower-gifs {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 40px;
+    opacity: 0;
+    animation: fadeIn 3s 1s forwards; /* Delay the flower GIF animation */
+}
+
+/* Flower GIFs styling */
+.flower-gif {
+    width: 120px;
+    height: 120px;
+    animation: rotate 5s linear infinite;
+}
+
+/* Smooth rotation animation for the GIFs */
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* Fade-in animation for the introduction and GIFs */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
