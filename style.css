@@ -1,107 +1,52 @@
+/* Reset basic styles */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* Body styles */
 body {
-    font-family: 'Roboto', sans-serif;
-    background: url('space-background.gif') no-repeat center center fixed;
-    background-size: cover;
-    color: white;
-    line-height: 1.6;
-    height: 100%;
+    font-family: 'Arial', sans-serif;
+    background-color: white;
+    color: darkorange; /* Dark Orange text */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
 }
 
-/* Navigation Bar */
-nav {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    background-color: rgba(0, 0, 0, 0.7);
-    padding: 20px 0;
-    text-align: center;
-    z-index: 1000;
-}
-
-nav ul {
-    list-style: none;
-    padding: 0;
-}
-
-nav ul li {
-    display: inline;
-    margin: 0 20px;
-}
-
-nav ul li a {
-    text-decoration: none;
-    color: white;
-    font-size: 1.2rem;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    transition: color 0.3s ease;
-}
-
-nav ul li a:hover {
-    color: #FFD700;
-}
-
-/* Header */
+/* Header and Typography */
 header {
     text-align: center;
-    margin-top: 200px;
 }
 
+/* Handwriting font and typing animation */
 .intro-text {
-    font-family: 'Lora', serif;
-    font-size: 3rem;
-    font-weight: 300;
-    letter-spacing: 1px;
-    animation: typing 3s steps(30) 1s forwards, blink 0.75s step-end infinite;
+    font-family: 'Patrick Hand', cursive; /* Handwriting font */
+    font-size: 4rem; /* Big text */
+    font-weight: normal;
+    color: darkorange;
+    border-right: 0.1em solid darkorange; /* Typing cursor effect */
+    padding-right: 10px;
+    animation: typing 3s steps(20) 1s forwards, blink 0.75s step-end infinite;
 }
 
-/* Typing Animation */
+/* Typing animation */
 @keyframes typing {
     from {
         width: 0;
     }
     to {
-        width: 100%;
+        width: 18em; /* Adjust width according to your text length */
     }
 }
 
+/* Cursor blink effect */
 @keyframes blink {
     50% {
         border-color: transparent;
     }
 }
 
-/* Sections */
-.content-section {
-    padding: 60px 20px;
-    text-align: center;
-    margin-top: 100px;
-    opacity: 0;
-    animation: fadeIn 2s forwards;
-}
-
-.content-section h2 {
-    font-size: 2.5rem;
-    margin-bottom: 20px;
-}
-
-.content-section p {
-    font-size: 1.2rem;
-    line-height: 1.6;
-}
-
-/* Fade-in effect */
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
-}
