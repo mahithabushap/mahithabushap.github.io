@@ -1,24 +1,53 @@
-/* Apply a sleek, minimalist design with a black background */
+/* Full background with space GIF */
 body {
-    background-color: black;
+    background: url('space-background.gif') no-repeat center center fixed;
+    background-size: cover;
     color: white;
     font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
     height: 100vh;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
+    justify-content: flex-start;
     text-align: center;
 }
 
-/* Styling the container */
-.container {
-    max-width: 800px;
+/* Navigation Bar Styling */
+nav {
+    position: absolute;
+    top: 0;
     width: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 15px 0;
+    z-index: 1000;
 }
 
-/* Style for the typing animation */
+.nav-links {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.nav-links li {
+    margin: 0 20px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+}
+
+.nav-links a:hover {
+    color: #FFD700;
+}
+
+/* Typing Effect Animation */
 .typing-animation {
     font-size: 3rem;
     font-weight: 300;
@@ -28,10 +57,10 @@ body {
     white-space: nowrap;
     overflow: hidden;
     width: 0; /* Initially set width to 0 for animation */
-    animation: typing 4s steps(30) 1s forwards, blink 0.75s step-end infinite;
+    animation: typing 2s steps(30) 1s forwards, blink 0.75s step-end infinite;
 }
 
-/* Typing effect animation */
+/* Speed up typing animation */
 @keyframes typing {
     0% {
         width: 0;
@@ -46,4 +75,46 @@ body {
     50% {
         border-color: transparent;
     }
+}
+
+/* Styling sections */
+section {
+    padding: 60px 20px;
+    margin-top: 100px;
+    opacity: 0;
+    animation: fadeIn 2s forwards;
+}
+
+section h2 {
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+section p {
+    font-size: 1.2rem;
+}
+
+/* Fade-in effect for sections */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Add some margin for each section */
+section:not(:first-child) {
+    margin-top: 80px;
+}
+
+/* Ensuring the content is centered vertically */
+.content {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60%;
 }
