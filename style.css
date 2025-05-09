@@ -10,65 +10,40 @@ body {
     justify-content: center;
     align-items: center;
     text-align: center;
-    overflow: hidden;
 }
 
 /* Styling the container */
 .container {
-    max-width: 1000px;
+    max-width: 800px;
     width: 100%;
 }
 
-/* Style for the introduction message */
-.intro h1 {
+/* Style for the typing animation */
+.typing-animation {
     font-size: 3rem;
     font-weight: 300;
-    color: white;
-    letter-spacing: 3px;
-    opacity: 0;
-    animation: fadeIn 2s forwards;
+    letter-spacing: 2px;
+    border-right: 3px solid white; /* Create the cursor effect */
+    padding-right: 5px;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 0; /* Initially set width to 0 for animation */
+    animation: typing 4s steps(30) 1s forwards, blink 0.75s step-end infinite;
 }
 
-/* Make "Mahitha" stand out */
-.name {
-    font-size: 3.5rem;
-    font-weight: 500;
-    letter-spacing: 5px;
-}
-
-/* Style for the flower GIFs */
-.flower-gifs {
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-    margin-top: 40px;
-    opacity: 0;
-    animation: fadeIn 3s 1s forwards; /* Delay the flower GIF animation */
-}
-
-/* Flower GIFs styling */
-.flower-gif {
-    width: 120px;
-    height: 120px;
-    animation: rotate 5s linear infinite;
-}
-
-/* Smooth rotation animation for the GIFs */
-@keyframes rotate {
+/* Typing effect animation */
+@keyframes typing {
     0% {
-        transform: rotate(0deg);
+        width: 0;
     }
     100% {
-        transform: rotate(360deg);
+        width: 100%;
     }
 }
 
-/* Fade-in animation for the introduction and GIFs */
-@keyframes fadeIn {
-    0% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
+/* Blinking cursor animation */
+@keyframes blink {
+    50% {
+        border-color: transparent;
     }
 }
